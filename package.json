@@ -7,8 +7,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/osisoft/OSI-Samples-OCS.git",
-    "directory": "basic_samples/Authentication/AuthorizationCodeFlow/JavaScript"
+    "url": "https://github.com/osisoft/sample-ocs-authentication_authorization-nodejs.git"
   },
   "scripts": {
     "start": "serve -l 5004 src",
