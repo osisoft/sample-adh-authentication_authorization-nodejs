@@ -3,7 +3,7 @@ const assert = require('assert');
 const { Builder, By, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const { JUnitXmlReporter } = require('jasmine-reporters');
-const config = require('../src/config');
+const appsettings = require('../src/appsettings.json');
 
 var junitReporter = new JUnitXmlReporter({
   savePath: 'TestResults',
@@ -18,7 +18,7 @@ describe('Sample App', () => {
 
   beforeEach(async function () {
     const options = new chrome.Options();
-    options.addArguments('--headless');
+    //options.addArguments('--headless');
     options.addArguments('--no-sandbox');
     driver = await new Builder()
       .forBrowser('chrome')
@@ -49,7 +49,7 @@ describe('Sample App', () => {
     // Enter user name, and click Next
     await driver
       .wait(until.elementLocated(By.id('i0116')), wait)
-      .then((e) => e.sendKeys(config.userName));
+      .then((e) => e.sendKeys(appsettings.userName));
     await driver
       .wait(until.elementLocated(By.id('idSIButton9')), wait)
       .then(async function (e) {
@@ -63,7 +63,7 @@ describe('Sample App', () => {
     await driver.wait(until.urlContains('username='), wait);
     await driver
       .wait(until.elementLocated(By.id('i0118')), wait)
-      .then((e) => e.sendKeys(config.password));
+      .then((e) => e.sendKeys(appsettings.password));
     await driver
       .wait(until.elementLocated(By.id('idSIButton9')), wait)
       .then(async function (e) {
