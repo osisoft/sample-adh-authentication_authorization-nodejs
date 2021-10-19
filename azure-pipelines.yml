@@ -36,7 +36,7 @@ jobs:
       demands: Agent.OS -equals Windows_NT
     variables:
       - name: acr_values
-        value: "tenant:" + $(TenantId)
+        value: 'tenant:$(TenantId)'
       - name: userName
         value: $(AuthorizationUsername)
       - name: password
