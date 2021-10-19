@@ -18,7 +18,7 @@ describe('Sample App', () => {
 
   beforeEach(async function () {
     const options = new chrome.Options();
-    //options.addArguments('--headless');
+    options.addArguments('--headless');
     options.addArguments('--no-sandbox');
     driver = await new Builder()
       .forBrowser('chrome')
