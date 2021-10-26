@@ -26,10 +26,6 @@ resources:
 
 variables:
   - template: '/miscellaneous/build_templates/variables.yml@templates'
-  - name: CredFile
-    value: config.js
-  - name: CredFileLibrary
-    value: product-readiness.auth_pkce_javascript.js
   - name: analysisProject
     value: Auth_PKCE_JavaScript
 
@@ -38,12 +34,19 @@ jobs:
     pool:
       name: 00-OSIManaged-Containers
       demands: Agent.OS -equals Windows_NT
+    variables:
+      - name: acr_values
+        value: 'tenant:$(TenantId)'
+      - name: userName
+        value: $(AuthorizationUsername)
+      - name: password
+        value: $(AuthorizationPassword)
+      - name: client_id
+        value: $(AuthorizationCodeClientId)
     steps:
-      - template: '/miscellaneous/build_templates/config.yml@templates'
+      - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
-          fileOriginal: $(CredFile)
-          fileLibrary: $(CredFileLibrary)
-          filePath: \src
+          secrets: 'AuthorizationUsername, AuthorizationPassword, TenantId, AuthorizationCodeClientId'
 
       - script: npm ci
         displayName: 'Install dependencies'
