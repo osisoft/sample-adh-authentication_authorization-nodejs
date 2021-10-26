@@ -1,6 +1,6 @@
 # Authorization Code Flow + PKCE JavaScript Sample and Test
 
-**Version:** 1.1.15
+**Version:** 1.1.16
 
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/OCS/osisoft.sample-ocs-authentication_authorization-nodejs?repoName=osisoft%2Fsample-ocs-authentication_authorization-nodejs&branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=3089&repoName=osisoft%2Fsample-ocs-authentication_authorization-nodejs&branchName=main)
 
