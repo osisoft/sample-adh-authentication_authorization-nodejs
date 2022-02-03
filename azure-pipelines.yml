@@ -47,10 +47,12 @@ jobs:
         value: $(AuthorizationPassword)
       - name: client_id
         value: $(AuthorizationCodeClientId)
+      - name: authority
+        value: $(Resource)
     steps:
       - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
-          secrets: 'AuthorizationUsername, AuthorizationPassword, TenantId, AuthorizationCodeClientId'
+          secrets: 'AuthorizationUsername, AuthorizationPassword, TenantId, AuthorizationCodeClientId, Resource'
 
       - script: npm ci
         displayName: 'Install dependencies'
