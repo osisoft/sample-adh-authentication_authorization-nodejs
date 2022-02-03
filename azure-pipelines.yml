@@ -48,7 +48,7 @@ jobs:
       - name: client_id
         value: $(AuthorizationCodeClientId)
       - name: authority
-        value: $(Resource)
+        value: $(Resource)/identity
     steps:
       - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
