@@ -29,21 +29,20 @@ You can learn more about the config options [here](https://github.com/IdentityMo
 
 1. Make sure Node.js is installed, installation instructions are available at [node.js](https://nodejs.org/en/)
 2. Clone the git repository
-3. Open a command prompt and navigate to this folder (sample-adh-authentication_authorization-nodejs)
-4. Install dependencies, using the command line:
+3. Install dependencies, using the command line:
 
    ```shell
    npm ci
    ```
 
-5. Start the http server to host the sample, using:
+4. Start the http server to host the sample, using:
 
    ```shell
    npm start
    ```
 
-6. Open a browser and navigate to `http://localhost:5004`
-7. Click on `Login` and follow the prompts to log in to ADH
+5. Open a browser and navigate to `http://localhost:5004`
+6. Click on `Login` and follow the prompts to log in to ADH
 
 ## Running the automated test
 
