@@ -28,7 +28,7 @@ describe('Sample App', () => {
 
   afterEach(() => driver && driver.quit());
 
-  it('Should log in to OCS', async function () {
+  it('Should log in to ADH', async function () {
     await driver.get('http://localhost:5004');
 
     // Click to log in
