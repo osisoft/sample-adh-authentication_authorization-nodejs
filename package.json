@@ -1,7 +1,7 @@
 {
   "name": "adh-pkce-javascript",
   "description": "A sample that performs Auth+PKCE OAuth flow against ADH",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "author": "OSIsoft, LLC",
   "license": "Apache-2.0",
@@ -14,8 +14,8 @@
     "test": "jasmine"
   },
   "devDependencies": {
-    "chromedriver": "^97.0.0",
-    "jasmine": "^4.0.1",
+    "chromedriver": "^99.0.0",
+    "jasmine": "^4.0.2",
     "jasmine-reporters": "^2.5.0",
     "selenium-webdriver": "^4.1.1",
     "serve": "^13.0.2"
