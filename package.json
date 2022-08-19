@@ -1,7 +1,7 @@
 {
   "name": "adh-pkce-javascript",
   "description": "A sample that performs Auth+PKCE OAuth flow against ADH",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "private": true,
   "author": "OSIsoft, LLC",
   "license": "Apache-2.0",
