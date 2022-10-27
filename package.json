@@ -16,7 +16,7 @@
   "devDependencies": {
     "chromedriver": "^106.0.1",
     "jasmine": "^4.4.0",
-    "jasmine-reporters": "^2.5.0",
+    "jasmine-reporters": "^2.5.1",
     "selenium-webdriver": "^4.5.0",
     "serve": "^14.0.1"
   }
