@@ -1,5 +1,9 @@
 # Version History
 
+## 1.2.7 / 2023-03-01
+
+- Address missing TLS issue
+
 ## 1.2.6 / 2022-08-17
 
 - Automate dependabot approval and automerge
