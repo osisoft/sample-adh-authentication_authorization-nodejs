@@ -64,8 +64,11 @@ jobs:
       
       - script: npm ci
         displayName: 'Install dependencies'
+        
+      - script: npm uninstall chromedriver
+        displayName: 'Uninstall old chromedriver'
      
-      - script: npm install chromedriver --detect_chromedriver_version --chromedriver-force-download
+      - script: npm install chromedriver --detect_chromedriver_versio
         displayName: 'Install chromedriver'
         
       - script: start /B npm start
