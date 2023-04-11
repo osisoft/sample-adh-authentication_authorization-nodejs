@@ -61,13 +61,13 @@ jobs:
       - template: '/miscellaneous/build_templates/appsettings.yml@templates'
         parameters:
           secrets: 'AuthorizationUsername, AuthorizationPassword, TenantId, AuthorizationCodeClientId, Resource'
-
-      - script: npm install chromedriver --detect_chromedriver_version
-        displayName: 'Install chromedriver'
-        
+      
       - script: npm ci
         displayName: 'Install dependencies'
-
+     
+      - script: npm install chromedriver --detect_chromedriver_version --chromedriver-force-download
+        displayName: 'Install chromedriver'
+        
       - script: start /B npm start
         displayName: 'Run app'
 
