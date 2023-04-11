@@ -62,11 +62,11 @@ jobs:
         parameters:
           secrets: 'AuthorizationUsername, AuthorizationPassword, TenantId, AuthorizationCodeClientId, Resource'
 
-      - script: npm ci
-        displayName: 'Install dependencies'
-
       - script: npm install chromedriver --detect_chromedriver_version
         displayName: 'Install chromedriver'
+        
+      - script: npm ci
+        displayName: 'Install dependencies'
 
       - script: start /B npm start
         displayName: 'Run app'
