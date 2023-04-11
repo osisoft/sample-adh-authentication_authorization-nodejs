@@ -18,7 +18,7 @@ describe('Sample App', () => {
 
   beforeEach(async function () {
     const options = new chrome.Options();
-    options.addArguments('--headless');
+    //options.addArguments('--headless');
     options.addArguments('--no-sandbox');
     driver = await new Builder()
       .forBrowser('chrome')
@@ -34,58 +34,21 @@ describe('Sample App', () => {
     // Click to log in
     await driver.findElement(By.id('login')).click();
 
-    // Select 'Personal Account' Microsoft login
+    // Enter user name, password, and click submit
     await driver
-      .wait(
-        until.elementLocated(
-          By.xpath('descendant::a[@title="Personal Account"]')
-        ),
-        wait
-      )
-      .then((e) => {
-        e.click();
-      });
-
-    // Enter user name, and click Next
-    await driver
-      .wait(until.elementLocated(By.id('i0116')), wait)
+      .wait(until.elementLocated(By.id('email')), wait)
       .then((e) => e.sendKeys(appsettings.userName));
     await driver
-      .wait(until.elementLocated(By.id('idSIButton9')), wait)
-      .then(async function (e) {
-        await driver.wait(until.elementIsEnabled(e), wait);
-        setTimeout(async function () {
-          await driver.findElement(By.id('idSIButton9')).click();
-        }, 500);
-      });
-
-    // Enter password, and click Next
-    await driver.wait(until.urlContains('username='), wait);
-    await driver
-      .wait(until.elementLocated(By.id('i0118')), wait)
+      .wait(until.elementLocated(By.id('password')), wait)
       .then((e) => e.sendKeys(appsettings.password));
     await driver
-      .wait(until.elementLocated(By.id('idSIButton9')), wait)
+      .wait(until.elementLocated(By.id('submit')), wait)
       .then(async function (e) {
         await driver.wait(until.elementIsEnabled(e), wait);
         setTimeout(async function () {
-          await driver.findElement(By.id('idSIButton9')).click();
+          await driver.findElement(By.id('submit')).click();
         }, 500);
       });
-
-    try {
-      // Login may or may not prompt to save credentials, use try/catch.
-      await driver
-        .wait(until.elementLocated(By.id('idSIButton9')), wait)
-        .then(async function (e) {
-          await driver.wait(until.elementIsEnabled(e), wait);
-          setTimeout(async function () {
-            try {
-              await driver.findElement(By.id('idSIButton9')).click();
-            } catch {}
-          }, 500);
-        });
-    } catch {}
 
     // Click tenant button, and verify results
     await driver

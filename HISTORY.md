@@ -1,5 +1,9 @@
 # Version History
 
+## 1.2.8 / 2023-04-11
+
+- Update Selenium login flow
+
 ## 1.2.7 / 2023-03-01
 
 - Address missing TLS issue
