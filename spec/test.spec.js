@@ -11,14 +11,14 @@ var junitReporter = new JUnitXmlReporter({
 jasmine.getEnv().addReporter(junitReporter);
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
 
-const wait = 5000;
+const wait = 10000;
 
 describe('Sample App', () => {
   let driver;
 
   beforeEach(async function () {
     const options = new chrome.Options();
-    //options.addArguments('--headless');
+    options.addArguments('--headless');
     options.addArguments('--no-sandbox');
     driver = await new Builder()
       .forBrowser('chrome')
