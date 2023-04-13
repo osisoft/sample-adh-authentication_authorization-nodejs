@@ -6,7 +6,7 @@
 **Version:** 1.2.8
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-authentication_authorization-nodejs?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=3089&branchName=main)
 
-This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main ADH Authentication samples page [README](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION_README.md) for more information about this flow.
+This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main ADH Authentication samples page [README]( https://github.com/osisoft/OSI-Samples-ADH/blob/main/docs/AUTHENTICATION.md) for more information about this flow.
 
 ## Requirements
 
