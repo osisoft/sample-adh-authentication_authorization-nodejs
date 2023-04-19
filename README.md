@@ -3,10 +3,10 @@
 | :loudspeaker: **Notice**: Samples have been updated to reflect that they work on AVEVA Data Hub. The samples also work on OSIsoft Cloud Services unless otherwise noted. |
 | -----------------------------------------------------------------------------------------------|  
 
-**Version:** 1.2.7
+**Version:** 1.2.8
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-authentication_authorization-nodejs?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=3089&branchName=main)
 
-This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main ADH Authentication samples page [README](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION_README.md) for more information about this flow.
+This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main ADH Authentication samples page [README]( https://github.com/osisoft/OSI-Samples-ADH/blob/main/docs/AUTHENTICATION.md) for more information about this flow.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an acc
 
 - Register an AuthorizationCode client in ADH and ensure that the registered client in ADH contains `http://localhost:5004/callback.html`, and `http://localhost:5004/silent-refresh.html` in the list of RedirectUris.
 - Configure the sample using the file [appsettings.placeholder.json](src/appsettings.placeholder.json). Before editing, rename this file to `appsettings.json`. This repository's `.gitignore` rules should prevent the file from ever being checked in to any fork or branch, to ensure credentials are not compromised.
-- Replace the placeholders in the `appsettings.json` file with your TenantID and ClientID obtained from registration.
+- Replace the placeholders in the `appsettings.json` file with your TenantID and ClientID obtained from registration. The username and password fields are used for testing and can be left as is.
 
 You can learn more about the config options [here](https://github.com/IdentityModel/oidc-client-js/wiki#other-optional-settings).
 
