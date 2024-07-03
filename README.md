@@ -1,9 +1,9 @@
 # Authorization Code Flow + PKCE JavaScript Sample and Test
 
 **Version:** 1.2.9
-[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-authentication_authorization-nodejs?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=3089&branchName=main)
+[![Build Status](https://dev.azure.com/AVEVA-VSTS/Cloud%20Platform/_apis/build/status%2Fproduct-readiness%2FADH%2FAVEVA.sample-adh-authentication_authorization-nodejs?repoName=AVEVA%2Fsample-adh-authentication_authorization-nodejs&branchName=main)](https://dev.azure.com/AVEVA-VSTS/Cloud%20Platform/_build/latest?definitionId=16135&repoName=AVEVA%2Fsample-adh-authentication_authorization-nodejs&branchName=main)
 
-This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main ADH Authentication samples page [README]( https://github.com/osisoft/OSI-Samples-ADH/blob/main/docs/AUTHENTICATION.md) for more information about this flow.
+This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main Cds Authentication samples page [README](https://github.com/AVEVA/AVEVA-Samples-CloudOperations/blob/main/docs/AUTHENTICATION.md) for more information about this flow.
 
 ## Requirements
 
@@ -15,7 +15,7 @@ This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an acc
 
 ### Prerequisites
 
-- Register an AuthorizationCode client in ADH and ensure that the registered client in ADH contains `http://localhost:5004/callback.html`, and `http://localhost:5004/silent-refresh.html` in the list of RedirectUris.
+- Register an AuthorizationCode client in Cds and ensure that the registered client in Cds contains `http://localhost:5004/callback.html`, and `http://localhost:5004/silent-refresh.html` in the list of RedirectUris.
 - Configure the sample using the file [appsettings.placeholder.json](src/appsettings.placeholder.json). Before editing, rename this file to `appsettings.json`. This repository's `.gitignore` rules should prevent the file from ever being checked in to any fork or branch, to ensure credentials are not compromised.
 - Replace the placeholders in the `appsettings.json` file with your TenantID and ClientID obtained from registration. The username and password fields are used for testing and can be left as is.
 
@@ -38,7 +38,7 @@ You can learn more about the config options [here](https://github.com/IdentityMo
    ```
 
 5. Open a browser and navigate to `http://localhost:5004`
-6. Click on `Login` and follow the prompts to log in to ADH
+6. Click on `Login` and follow the prompts to log in to Cds
 
 ## Running the automated test
 
@@ -60,6 +60,6 @@ npm test
 
 ---
 
-For the main ADH Authentication samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION.md)  
-For the main ADH samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS)  
-For the main AVEVA samples page [ReadMe](https://github.com/osisoft/OSI-Samples)
+For the main Cds Authentication samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations/blob/main/docs/AUTHENTICATION.md)  
+For the main Cds samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations)  
+For the main AVEVA samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples)
